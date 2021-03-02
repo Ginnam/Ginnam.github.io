@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-04T09:44:27.168Z</updated>
+  <updated>2021-03-02T07:56:12.961Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学习51遇到的错误之一</title>
+    <link href="http://yoursite.com/2021/03/02/51%E5%BC%80%E5%8F%91%E6%9D%BF%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2021/03/02/51开发板学习/</id>
+    <published>2021-03-02T07:33:16.000Z</published>
+    <updated>2021-03-02T07:56:12.961Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天在学习时，显示屏什么都不显示，重新烧录代码STC-ISP软件卡死，我还以为开发板坏了，找了半个小时的错误，最后发现：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;REGX52.H&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"LCD1602.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"Delay.h"</span></span></span><br><span class="line"><span class="keyword">int</span> num=<span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">LCD_Init();</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>);</span><br><span class="line">&#123;</span><br><span class="line">num++;</span><br><span class="line">Delay(<span class="number">500</span>);</span><br><span class="line">LCD_ShowNum(<span class="number">1</span>,<span class="number">1</span>,num,<span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>原来是代码<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)</span><br></pre></td></tr></table></figure></p><p>后面多加了分号，调试时忘记删了，以后还是老老实实使用{}吧。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今天在学习时，显示屏什么都不显示，重新烧录代码STC-ISP软件卡死，我还以为开发板坏了，找了半个小时的错误，最后发现：&lt;br&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span clas
+      
+    
+    </summary>
+    
+    
+    
+      <category term="编程" scheme="http://yoursite.com/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>第一篇Blog</title>

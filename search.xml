@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>学习51遇到的错误之一</title>
+    <url>/2021/03/02/51%E5%BC%80%E5%8F%91%E6%9D%BF%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<p>今天在学习时，显示屏什么都不显示，重新烧录代码STC-ISP软件卡死，我还以为开发板坏了，找了半个小时的错误，最后发现：<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;REGX52.H&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"LCD1602.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"Delay.h"</span></span></span><br><span class="line"><span class="keyword">int</span> num=<span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	LCD_Init();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>);</span><br><span class="line">	&#123;</span><br><span class="line">		num++;	</span><br><span class="line">		Delay(<span class="number">500</span>);</span><br><span class="line">		LCD_ShowNum(<span class="number">1</span>,<span class="number">1</span>,num,<span class="number">2</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>原来是代码<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)</span><br></pre></td></tr></table></figure></p>
+<p>后面多加了分号，调试时忘记删了，以后还是老老实实使用{}吧。</p>
+]]></content>
+      <tags>
+        <tag>编程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>第一篇Blog</title>
     <url>/2019/10/01/HappyDay/</url>
     <content><![CDATA[<h1 id="庆国庆-amp-第一篇Blog"><a href="#庆国庆-amp-第一篇Blog" class="headerlink" title="庆国庆&amp;第一篇Blog"></a>庆国庆&amp;第一篇Blog</h1><p>今天的国庆阅兵真的很震撼，数万人<del>（大概）</del>整齐的脚步声，他们挺起的胸膛，坚毅的眼神。只能说太强了~~<br>同样也发生了些不愉快的事情，希望能调节过来，不是有句话这么说吗，<strong>那些摧毁我的会使我更强！</strong><br>感谢NightTeam的教程，感谢GitHub Pages！<br>赶在同一天发布，希望能好好经营这个Blog，好好加油！<br>第一次搭Blog，第一次接触Markdown，第一次…(<em>交给时间补充</em>)<br>啊就先这样吧，不知所言。</p>
